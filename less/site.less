@@ -1,0 +1,89 @@
+@import "bootstrap/variables.less";
+@import "flockbird/variables.less";
+
+.navbar-brand {
+	position: relative;
+	padding-left: 50px !important;
+
+	@media (min-width: @screen-sm-min) {
+		& {
+			margin-left: 0 !important;
+			padding-right: @parts-padding-md !important;
+		}
+	}
+
+	img {
+		position: absolute;
+		top: @parts-margin-sm;
+		left: @parts-margin-sm;
+	}
+}
+
+.navbar-brand-lg {
+	display: block;
+	padding: @parts-margin-sm @parts-margin-sm @parts-margin-xs 0;
+}
+
+.navbar .popover {
+	right: @parts-margin-md!important;
+	min-width: 195px;
+}
+
+.navbar .popover-content {
+	padding: @parts-margin-xs 0;
+
+	.checkbox input {
+		margin-left: (@parts-margin-lg * -1);
+	}
+}
+
+#insecure_user_popover, #insecure_user_modal {
+	.form-group .btn {
+		margin-bottom: @parts-margin-xs;
+	}
+
+	label.checkbox {
+		font-size: 85%;
+	}
+}
+
+#insecure_user_modal {
+	.modal-footer {
+		border-top: 0;
+	}
+}
+
+.popover-content .radio,
+.popover-content .checkbox
+{
+	padding-left: @parts-margin-xs;
+}
+
+#map {
+	height: 400px;
+}
+
+#site_index {
+	.carousel-caption {
+		@media (max-width: @screen-xs-max) {
+			& {
+				bottom: 5px !important;
+				padding-bottom: 10px !important;
+			}
+		}
+	}
+}
+
+#main_post_box {
+	> .commentPostBox {
+		margin-bottom: @parts-margin-lg;
+	}
+}
+
+.comment_info {
+	padding: 5px 0;
+
+	div[id^="___plusone_"] {
+		vertical-align: middle !important;
+	}
+}

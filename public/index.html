@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="サンプルSNSです。">
+<meta name="keywords" content="SNS,サンプル">
+<title>サンプルSNSです サンプルSNS</title>
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="サンプルSNS">
+<meta property="og:type" content="website">
+<meta property="og:description" content="サンプルSNSです">
+<meta property="og:url" content="http://demo.flockbird.uzuralife.com/">
+<meta property="og:image" content="http://demo.flockbird.uzuralife.com/assets/img/ico/apple-touch-icon-144-precomposed.png">
+<meta property="og:site_name" content="サンプルSNS">
+<meta property="og:email" content="admin@example.com">
+
+<!--[if lt IE 9]>
+		<script type="text/javascript" src="/assets/js/html5shiv.js?1431041947"></script>
+		<script type="text/javascript" src="/assets/js/respond.min.js?1431041947"></script>
+<![endif]-->
+
+	<link type="text/css" rel="stylesheet" href="/assets/css/apprise.css?1431041947" />
+	<link type="text/css" rel="stylesheet" href="/assets/css/jquery.jgrowl.min.css?1449010199" />
+	<link type="text/css" rel="stylesheet" href="/assets/css/font-awesome.min.css?1456355377" />
+	<link type="text/css" rel="stylesheet" href="/assets/ccss/bootstrap.custom.css?1456355403" />
+	<link type="text/css" rel="stylesheet" href="/assets/ccss/base.css?1456355404" />
+	<link type="text/css" rel="stylesheet" href="/assets/ccss/base_pc.css?1456355404" />
+
+	<link type="text/css" rel="stylesheet" href="/assets/ccss/site.css?1449010235" />
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="/assets/img/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/img/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/assets/img/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body id="site_index">
+
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="http://demo.flockbird.uzuralife.com/">
+				<img alt="サンプルSNS" src="/assets/img/ico/logo.png" />				<span class="hidden-xs hidden-sm">サンプルSNS</span>
+			</a>
+		<div class="navbar-btn pull-right">
+			<div class="btn-group pull-right">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<img class="profile_image" alt="デモユーザ2" src="/media/img/20x20xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /><span class="hidden-xs-inline"> デモユーザ2</span>
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="http://demo.flockbird.uzuralife.com/member/"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+					<li><a href="http://demo.flockbird.uzuralife.com/member/profile/"><i class="glyphicon glyphicon-user"></i> プロフィール</a></li>
+					<li><a href="http://demo.flockbird.uzuralife.com/member/invite/"><i class="glyphicon glyphicon-envelope"></i> 友達を招待</a></li>
+					<li><a href="http://demo.flockbird.uzuralife.com/member/setting/"><i class="glyphicon glyphicon-cog"></i> 設定</a></li>
+					<li><a href="http://demo.flockbird.uzuralife.com/auth/logout/"><i class="glyphicon glyphicon-log-out"></i> ログアウト</a></li>
+				</ul>
+			</div>
+<div class="btn-group notice pull-right">
+
+	<button class="btn btn-default navbar-inverse js-modal notified" type="button" data-uri="message/api/list.json" data-get_data='{"limit":null}' data-target="#modal_message_navbar" data-tmpl="#messages-template" data-is_list="1" id="btn_message_navbar">
+		<i class="icon fa fa-envelope"></i>		<span class="badge">4</span>
+	</button>
+
+	<button class="btn btn-default navbar-inverse js-modal notified" type="button" data-uri="notice/api/list.json" data-get_data='{"limit":5}' data-target="#modal_notice_navbar" data-tmpl="#notices-template" data-is_list="1" id="btn_notice_navbar">
+		<i class="icon fa fa-info-circle"></i>		<span class="badge">2</span>
+	</button>
+
+</div>
+		</div>
+
+		</div>
+		<div class="collapse navbar-collapse">
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="http://demo.flockbird.uzuralife.com/member/"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+					<li><a href="http://demo.flockbird.uzuralife.com/timeline/"> タイムライン</a></li>
+					<li><a href="http://demo.flockbird.uzuralife.com/thread/"> スレッド</a></li>
+					<li><a href="http://demo.flockbird.uzuralife.com/note/"> 日記</a></li>
+					<li><a href="http://demo.flockbird.uzuralife.com/album/image/"> アルバム写真</a></li>
+					<li><a href="http://demo.flockbird.uzuralife.com/member/list/"> メンバー</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div><!-- /.nav-collapse -->
+	</div><!-- /.container -->
+</div><!-- /.navbar -->
+
+	<div id="post_header">
+<div id="myCarousel" class="carousel carousel-flex slide" data-ride="carousel" data-interval="30000">
+	<!-- Indicators -->
+	<ol class="carousel-indicators hidden-xs">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<img src="/assets/img/site/sample/01.jpg" alt="01" />			<div class="container">
+				<div class="carousel-caption">
+					<h1>サンプルSNS</h1>
+					<p>サンプルSNSです</p>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<img src="/assets/img/site/sample/02.jpg" alt="02" />			<div class="container">
+				<div class="carousel-caption">
+					<h1>サンプルSNS</h1>
+					<p>サンプルSNSです</p>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<img src="/assets/img/site/sample/03.jpg" alt="03" />			<div class="container">
+				<div class="carousel-caption">
+					<h1>サンプルSNS</h1>
+					<p>サンプルSNSです</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="sr-only">Next</span>
+	</a>
+</div><!-- /.carousel -->
+	</div><!-- #post_header -->
+
+<div class="container" id="main_container">
+	<div class="row row-offcanvas row-offcanvas-right">
+		<div class="col-sm-9">
+
+
+
+
+<div id="main">
+<div class="well u-wrap">
+<h2>このサイトはOSSのSNSエンジン <a href="http://uzura8.github.io/flockbird/" title="http://uzura8.github.io/flockbird/">Flockbird</a> を使用したデモサイトです。</h2>
+
+<ul>
+<li>
+<a href="http://uzura8.github.io/flockbird/" title="http://uzura8.github.io/flockbird/">Flockbird</a> はOSSのSNSエンジンです</li>
+<li>FacebookライクなSNSを構築できます</li>
+<li>FuelPHP1.7.X を Framework に使用しています</li>
+<li>Licenseは MIT ライセンスです</li>
+<li><a href="https://github.com/uzura8/flockbird" title="https://github.com/uzura8/flockbird">Github</a></li>
+</ul>
+
+<h3>ログインアカウント</h3>
+
+<ul>
+<li>投稿にはログインが必要です</li>
+<li>下記のURL・アカウントでログインできます
+
+<ul>
+<li>URL  : <a href="http://demo.flockbird.uzuralife.com/auth/login" title="http://demo.flockbird.uzuralife.com/auth/login">http://demo.flockbird.uzuralife.com/auth/login</a>
+</li>
+<li>email: <a href="mailto:sample@example.com" title="mailto:sample@example.com">sample@example.com</a>
+</li>
+<li>pass : password</li>
+</ul>
+</li>
+<li>自由に新規登録することも可能です</li>
+</ul>
+
+<h3>管理画面</h3>
+
+<ul>
+<li>管理画面は下記のURL・アカウントでログインできます
+
+<ul>
+<li>URL  : <a href="http://demo.flockbird.uzuralife.com/admin" title="http://demo.flockbird.uzuralife.com/admin">http://demo.flockbird.uzuralife.com/admin</a>
+</li>
+<li>email: admin</li>
+<li>pass : password</li>
+</ul>
+</li>
+</ul>
+
+<h3>注意事項</h3>
+
+<ul>
+<li>入力したデータは一定時間で削除します</li>
+</ul>
+  
+</div>
+
+
+<!-- GoogleAdsense -->
+<!-- GoogleAdsense -->
+
+
+<h3>最新のタイムライン</h3>
+<div id="article_list" data-not_render_site_summary="1"><input id="liked_timeline_ids" name="liked_timeline_ids" value="[]" type="hidden" />
+<div class="timelineBox js-hide-btn" id="timelineBox_79" data-id="79" data-hidden_btn="btn_dropdown_79" data-hidden_btn_absolute="1" data-list_id="177" data-comment_count="0" data-like_count="2">
+	<div class="row member_contents">
+		<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+		<div class="col-xs-11">
+			<div class="member_info">
+				<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+			</div>
+			<div class="main">
+				
+<div>ハンガリーの風景</div>
+
+
+
+
+
+
+<div class="thumbnails">
+<div class="row">
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/122.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/122"><img class="" src="/media/img/400x300xc/ai/3/25d677ab0f07983b041e3fb994546f4489ffcade.jpg" alt="25d677ab0f07983b041e3fb994546f4489ffcade" /></a>	</div>
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/123.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/123"><img class="" src="/media/img/400x300xc/ai/3/2afb293fc08d70fd87b0bf2097cb5685a372858b.jpg" alt="2afb293fc08d70fd87b0bf2097cb5685a372858b" /></a>	</div>
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/124.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/124"><img class="" src="/media/img/400x300xc/ai/3/27c123deb0e883c3ff5265c81afa829ede978c2a.jpg" alt="27c123deb0e883c3ff5265c81afa829ede978c2a" /></a>	</div>
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/125.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/125"><img class="" src="/media/img/400x300xc/ai/3/c40a69c0249fbee8c1850ae7e51a0cb448e5a945.jpg" alt="c40a69c0249fbee8c1850ae7e51a0cb448e5a945" /></a>	</div>
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/126.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/126"><img class="" src="/media/img/400x300xc/ai/3/74c2ce717d36f662e70ca30e43de1d6c22bbf84d.jpg" alt="74c2ce717d36f662e70ca30e43de1d6c22bbf84d" /></a>	</div>
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/127.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/127"><img class="" src="/media/img/400x300xc/ai/3/e656729706064351d4ad2f59ed60a91b817170bc.jpg" alt="e656729706064351d4ad2f59ed60a91b817170bc" /></a>	</div>
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/128.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/128"><img class="" src="/media/img/400x300xc/ai/3/fffe5ec2986916493b2bcd70eea25b3006b1937e.jpg" alt="fffe5ec2986916493b2bcd70eea25b3006b1937e" /></a>	</div>
+</div>
+<div><a href="http://demo.flockbird.uzuralife.com/timeline/79"><span class="glyphicon glyphicon-picture"></span> 7 枚</a></div>
+</div>
+
+
+		<div class="sub_info">
+			<small>2016年1月3日 10:16</small>
+
+<div class="public_flag btn-group dropdown-toggle">	<button  class="btn dropdown-toggle btn-default btn-xs btn-info check_require_caret js-exec_unauth" type="button" data-toggle="dropdown" data-public_flag="1" id="public_flag_timeline_79" data-uid="2" data-func="removeNext">
+		<i class="fa fa-globe"></i><span class="hidden-xs-inline"> WEB全体に公開</span> <span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		<li><a data-public_flag="0" data-id="79" data-model="timeline" data-model_uri="timeline" data-public_flag_original="1" class="update_public_flag js-ajax-updatePublicFlag" href="#"><i class="fa fa-lock"></i> 非公開</a></li>
+		<li><span class="disabled"><i class="fa fa-globe"></i> WEB全体に公開</span></li>
+		<li><a data-public_flag="2" data-id="79" data-model="timeline" data-model_uri="timeline" data-public_flag_original="1" class="update_public_flag js-ajax-updatePublicFlag" href="#"><i class="fa fa-group"></i> メンバーのみに公開</a></li>
+	</ul>
+</div>		</div><!-- sub_info -->
+
+
+
+<div class="comment_info">
+<small class="mr3"><i class="glyphicon glyphicon-comment"></i> <span class="comment_count unset_comment_count" id="comment_count_79" data-id="79"></span></small>
+<small class="mr10"><a class="link_show_comment" id="link_show_comment_79" data-id="79" href="#">コメント</a></small>
+
+<small>
+<a class="js-modal timeline_link_like_count" id="timeline_link_like_count_79" data-target="#modal_like_member" data-uri="timeline/like/api/member/79.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="timeline_like_count unset_like_count" id="timeline_like_count_79" data-id="79"></span></a></small>
+
+<small class="mr10"><a class="js-like timeline_link_like mr3" id="timeline_link_like_79" data-id="79" data-uri="timeline/like/api/update/79.json" data-count="#timeline_like_count_79" href="#">イイねする</a></small>
+
+<!-- share button -->
+<a class="btn btn-primary btn-xs mr10" onClick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" href="http://www.facebook.com/share.php?u=http://demo.flockbird.uzuralife.com/timeline/79"><i class="fa fa-facebook-square"></i> シェアする</a>
+<a class="btn btn-info btn-xs mr10" target="_blank" href="http://twitter.com/share?url=http://demo.flockbird.uzuralife.com/timeline/79&amp;text=%E3%83%8F%E3%83%B3%E3%82%AC%E3%83%AA%E3%83%BC%E3%81%AE%E9%A2%A8%E6%99%AF"><i class="fa fa-twitter-square"></i> tweetする</a>
+<a class="btn btn-success btn-xs mr10 fb-sp-view" target="_blank" href="http://line.me/R/msg/text/?%E3%83%8F%E3%83%B3%E3%82%AC%E3%83%AA%E3%83%BC%E3%81%AE%E9%A2%A8%E6%99%AF http://demo.flockbird.uzuralife.com/timeline/79"> LINEで送る</a>
+<g:plusone data-href="http://demo.flockbird.uzuralife.com/timeline/79" expandTo="bottom"></g:plusone>
+
+
+</div><!-- comment_info -->
+
+<div class="comment_list unloade_comments" id="comment_list_79" data-id="79" data-post_uri="timeline/comment/api/create/79.json" data-get_uri="timeline/comment/api/list/79.json" data-get_data='{"image_size":"S"}' data-input="#textarea_comment_79">
+</div>
+
+<a class="link_show_comment_form showCommentBox hidden" id="link_show_comment_form_79" data-id="79" data-block="form_comment_79" href="#">コメントする</a>
+<div id="form_comment_79"></div>
+
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_79">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="timeline/api/menu/79.html" data-member_id="2" data-loaded="0" data-parent="timelineBox_79" data-menu="#menu_79" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_79">
+			<li><a href="http://demo.flockbird.uzuralife.com/timeline/79"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+			</div>
+		</div>
+	</div>
+</div><!-- timelineBox -->
+<div class="timelineBox js-hide-btn" id="timelineBox_78" data-id="78" data-hidden_btn="btn_dropdown_78" data-hidden_btn_absolute="1" data-list_id="175" data-comment_count="0" data-like_count="1">
+	<div class="row member_contents">
+		<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+		<div class="col-xs-11">
+			<div class="member_info">
+				<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+			</div>
+			<div class="main">
+				
+<div>ポルトガルの風景</div>
+
+
+
+
+
+
+<div class="thumbnails">
+<div class="row">
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/117.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/117"><img class="" src="/media/img/400x300xc/ai/3/519b71ebc585b9123de2d1718dacf8de4971bc1e.jpg" alt="519b71ebc585b9123de2d1718dacf8de4971bc1e" /></a>	</div>
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/118.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/118"><img class="" src="/media/img/400x300xc/ai/3/f22200cf125e5cce4c18f27af8fea4c26e79189f.jpg" alt="f22200cf125e5cce4c18f27af8fea4c26e79189f" /></a>	</div>
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/119.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/119"><img class="" src="/media/img/400x300xc/ai/3/c87fa4029f631cbe966041511ad9c18101316b92.jpg" alt="c87fa4029f631cbe966041511ad9c18101316b92" /></a>	</div>
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/120.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/120"><img class="" src="/media/img/400x300xc/ai/3/f44b0d46b45cf16576e3ce4f9117a83503cf6a18.jpg" alt="f44b0d46b45cf16576e3ce4f9117a83503cf6a18" /></a>	</div>
+	<div class="col-sm-4 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/121.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/121"><img class="" src="/media/img/400x300xc/ai/3/6adf6492d3d3f53e0f031ec16329a8ca55ded683.jpg" alt="6adf6492d3d3f53e0f031ec16329a8ca55ded683" /></a>	</div>
+</div>
+<div><a href="http://demo.flockbird.uzuralife.com/timeline/78"><span class="glyphicon glyphicon-picture"></span> 5 枚</a></div>
+</div>
+
+
+		<div class="sub_info">
+			<small>2016年1月3日 10:15</small>
+
+<div class="public_flag btn-group dropdown-toggle">	<button  class="btn dropdown-toggle btn-default btn-xs btn-info check_require_caret js-exec_unauth" type="button" data-toggle="dropdown" data-public_flag="1" id="public_flag_timeline_78" data-uid="2" data-func="removeNext">
+		<i class="fa fa-globe"></i><span class="hidden-xs-inline"> WEB全体に公開</span> <span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		<li><a data-public_flag="0" data-id="78" data-model="timeline" data-model_uri="timeline" data-public_flag_original="1" class="update_public_flag js-ajax-updatePublicFlag" href="#"><i class="fa fa-lock"></i> 非公開</a></li>
+		<li><span class="disabled"><i class="fa fa-globe"></i> WEB全体に公開</span></li>
+		<li><a data-public_flag="2" data-id="78" data-model="timeline" data-model_uri="timeline" data-public_flag_original="1" class="update_public_flag js-ajax-updatePublicFlag" href="#"><i class="fa fa-group"></i> メンバーのみに公開</a></li>
+	</ul>
+</div>		</div><!-- sub_info -->
+
+
+
+<div class="comment_info">
+<small class="mr3"><i class="glyphicon glyphicon-comment"></i> <span class="comment_count unset_comment_count" id="comment_count_78" data-id="78"></span></small>
+<small class="mr10"><a class="link_show_comment" id="link_show_comment_78" data-id="78" href="#">コメント</a></small>
+
+<small>
+<a class="js-modal timeline_link_like_count" id="timeline_link_like_count_78" data-target="#modal_like_member" data-uri="timeline/like/api/member/78.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="timeline_like_count unset_like_count" id="timeline_like_count_78" data-id="78"></span></a></small>
+
+<small class="mr10"><a class="js-like timeline_link_like mr3" id="timeline_link_like_78" data-id="78" data-uri="timeline/like/api/update/78.json" data-count="#timeline_like_count_78" href="#">イイねする</a></small>
+
+<!-- share button -->
+<a class="btn btn-primary btn-xs mr10" onClick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" href="http://www.facebook.com/share.php?u=http://demo.flockbird.uzuralife.com/timeline/78"><i class="fa fa-facebook-square"></i> シェアする</a>
+<a class="btn btn-info btn-xs mr10" target="_blank" href="http://twitter.com/share?url=http://demo.flockbird.uzuralife.com/timeline/78&amp;text=%E3%83%9D%E3%83%AB%E3%83%88%E3%82%AC%E3%83%AB%E3%81%AE%E9%A2%A8%E6%99%AF"><i class="fa fa-twitter-square"></i> tweetする</a>
+<a class="btn btn-success btn-xs mr10 fb-sp-view" target="_blank" href="http://line.me/R/msg/text/?%E3%83%9D%E3%83%AB%E3%83%88%E3%82%AC%E3%83%AB%E3%81%AE%E9%A2%A8%E6%99%AF http://demo.flockbird.uzuralife.com/timeline/78"> LINEで送る</a>
+<g:plusone data-href="http://demo.flockbird.uzuralife.com/timeline/78" expandTo="bottom"></g:plusone>
+
+
+</div><!-- comment_info -->
+
+<div class="comment_list unloade_comments" id="comment_list_78" data-id="78" data-post_uri="timeline/comment/api/create/78.json" data-get_uri="timeline/comment/api/list/78.json" data-get_data='{"image_size":"S"}' data-input="#textarea_comment_78">
+</div>
+
+<a class="link_show_comment_form showCommentBox hidden" id="link_show_comment_form_78" data-id="78" data-block="form_comment_78" href="#">コメントする</a>
+<div id="form_comment_78"></div>
+
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_78">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="timeline/api/menu/78.html" data-member_id="2" data-loaded="0" data-parent="timelineBox_78" data-menu="#menu_78" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_78">
+			<li><a href="http://demo.flockbird.uzuralife.com/timeline/78"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+			</div>
+		</div>
+	</div>
+</div><!-- timelineBox -->
+<div class="timelineBox js-hide-btn" id="timelineBox_77" data-id="77" data-hidden_btn="btn_dropdown_77" data-hidden_btn_absolute="1" data-list_id="173" data-comment_count="0" data-like_count="0">
+	<div class="row member_contents">
+		<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/10"><img class="img-responsive profile_image" alt="SayoYamada" src="/media/img/50x50xc/ai/3/27d5c4ccfa98c9e17907b35590c6fc92cc6cf3ae.jpg" /></a></div>
+		<div class="col-xs-11">
+			<div class="member_info">
+				<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/10">SayoYamada</a></b>
+			</div>
+			<div class="main">
+				
+プロフィール写真を設定しました。
+
+
+
+<div class="thumbnails">
+<div class="row">
+	<div class="col-sm-6 thumbnail_box">
+<a class="thumbnail js-modal btn_modal_slide" data-is_list="1" data-uri="album/image/api/slide/116.html" data-target="#modal_album_slide" href="http://demo.flockbird.uzuralife.com/album/image/116"><img class="" src="/media/img/400x300xc/ai/3/27d5c4ccfa98c9e17907b35590c6fc92cc6cf3ae.jpg" alt="27d5c4ccfa98c9e17907b35590c6fc92cc6cf3ae" /></a>	</div>
+</div>
+</div>
+
+
+		<div class="sub_info">
+			<small>2015年12月18日 22:09</small>
+
+<a class="btn btn-default btn-xs public_flag btn-info" data-toggle="tooltip" data-placement="top" title="変更できません。" onclick="return false;" href="#"><i class="fa fa-globe"></i><span class="hidden-xs-inline"> WEB全体に公開</span></a>
+
+		</div><!-- sub_info -->
+
+
+
+<div class="comment_info">
+<small class="mr3"><i class="glyphicon glyphicon-comment"></i> <span class="comment_count unset_comment_count" id="comment_count_77" data-id="77"></span></small>
+<small class="mr10"><a class="link_show_comment" id="link_show_comment_77" data-id="77" href="#">コメント</a></small>
+
+<small>
+<a class="js-modal timeline_link_like_count" id="timeline_link_like_count_77" data-target="#modal_like_member" data-uri="album/image/like/api/member/116.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="timeline_like_count unset_like_count" id="timeline_like_count_77" data-id="77"></span></a></small>
+
+<small class="mr10"><a class="js-like timeline_link_like mr3" id="timeline_link_like_77" data-id="77" data-uri="album/image/like/api/update/116.json" data-count="#timeline_like_count_77" href="#">イイねする</a></small>
+
+<!-- share button -->
+<a class="btn btn-primary btn-xs mr10" onClick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" href="http://www.facebook.com/share.php?u=http://demo.flockbird.uzuralife.com/timeline/77"><i class="fa fa-facebook-square"></i> シェアする</a>
+<a class="btn btn-info btn-xs mr10" target="_blank" href="http://twitter.com/share?url=http://demo.flockbird.uzuralife.com/timeline/77&amp;text=%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%B3%E3%81%AB%E6%8A%95%E7%A8%BF%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82"><i class="fa fa-twitter-square"></i> tweetする</a>
+<a class="btn btn-success btn-xs mr10 fb-sp-view" target="_blank" href="http://line.me/R/msg/text/?%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%A9%E3%82%A4%E3%83%B3%E3%81%AB%E6%8A%95%E7%A8%BF%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82 http://demo.flockbird.uzuralife.com/timeline/77"> LINEで送る</a>
+<g:plusone data-href="http://demo.flockbird.uzuralife.com/timeline/77" expandTo="bottom"></g:plusone>
+
+
+</div><!-- comment_info -->
+
+<div class="comment_list unloade_comments" id="comment_list_77" data-id="77" data-post_uri="album/image/comment/api/create/116.json" data-get_uri="album/image/comment/api/list/116.json" data-get_data='{"image_size":"S"}' data-input="#textarea_comment_77">
+</div>
+
+<a class="link_show_comment_form showCommentBox hidden" id="link_show_comment_form_77" data-id="77" data-block="form_comment_77" href="#">コメントする</a>
+<div id="form_comment_77"></div>
+
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_77">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="timeline/api/menu/77.html" data-member_id="10" data-loaded="0" data-parent="timelineBox_77" data-menu="#menu_77" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_77">
+			<li><a href="http://demo.flockbird.uzuralife.com/timeline/77"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+			</div>
+		</div>
+	</div>
+</div><!-- timelineBox -->
+
+<a class="listMoreBox" href="http://demo.flockbird.uzuralife.com/timeline?max_id=171"><i class="fa fa-caret-down"></i> もっとみる</a>
+</div><!-- article_list -->
+
+<h3>最新のアルバム写真</h3>
+<div class="row">
+<div id="image_list">
+	<div class="image_item js-hide-btn" id="image_item_128" data-hidden_btn="btn_dropdown_128">
+		<div class="imgBox" id="imgBox_128" onmouseover="$('#btn_album_image_edit_128').show();" onmouseout="$('#btn_album_image_edit_128').hide();">
+			<div class="content"><a href="http://demo.flockbird.uzuralife.com/album/image/128"><img class="" src="/media/img/220x220/ai/3/fffe5ec2986916493b2bcd70eea25b3006b1937e.jpg" alt="fffe5ec2986916493b2bcd70eea25b3006b1937e" /></a></div>
+			<h5><a href="http://demo.flockbird.uzuralife.com/album/image/128">j_tabi_038.JPG</a></h5>
+
+<div class="row member_contents">
+	<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+	<div class="col-xs-11">
+		<div class="main">
+			<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+		</div>
+
+		<div class="sub_info">
+			<small>2015年7月13日 20:54</small>
+
+
+
+<a class="btn btn-default btn-xs public_flag btn-info" data-toggle="tooltip" data-placement="top" title="タイムライン用アルバムの公開範囲は編集できません。" onclick="return false;" href="#"><i class="fa fa-globe"></i></a>
+
+		</div><!-- sub_info -->
+
+
+	</div>
+</div>
+
+
+			<div class="article">
+				<div class="subinfo">
+					<small>アルバム: <a href="http://demo.flockbird.uzuralife.com/album/3">タイムライン用アルバム</a></small>
+				</div>
+
+				<div class="comment_info">
+					<small><span class="glyphicon glyphicon-comment"></span> 0</small>
+					<small><a href="http://demo.flockbird.uzuralife.com/album/image/128?write_comment=1#comments">コメントする</a></small>
+				</div><!-- comment_info -->
+
+<small>
+<a class="js-modal link_like_count" id="link_like_count_128" data-target="#modal_like_member" data-uri="album/image/like/api/member/128.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="like_count unset_like_count" id="like_count_128" data-id="128">0</span></a></small>
+
+<small class="mr10"><a class="js-like link_like mr3" id="link_like_128" data-id="128" data-uri="album/image/like/api/update/128.json" data-count="#like_count_128" href="#">イイねする</a></small>
+
+			</div><!-- article -->
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_128">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="album/image/api/menu/128.html" data-member_id="2" data-menu="#menu_128" data-loaded="0" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_128">
+			<li><a href="http://demo.flockbird.uzuralife.com/album/image/128"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+		</div><!-- imgBox -->
+
+	</div><!-- image_item -->
+	<div class="image_item js-hide-btn" id="image_item_127" data-hidden_btn="btn_dropdown_127">
+		<div class="imgBox" id="imgBox_127" onmouseover="$('#btn_album_image_edit_127').show();" onmouseout="$('#btn_album_image_edit_127').hide();">
+			<div class="content"><a href="http://demo.flockbird.uzuralife.com/album/image/127"><img class="" src="/media/img/220x220/ai/3/e656729706064351d4ad2f59ed60a91b817170bc.jpg" alt="e656729706064351d4ad2f59ed60a91b817170bc" /></a></div>
+			<h5><a href="http://demo.flockbird.uzuralife.com/album/image/127">i_tabi_053.JPG</a></h5>
+
+<div class="row member_contents">
+	<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+	<div class="col-xs-11">
+		<div class="main">
+			<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+		</div>
+
+		<div class="sub_info">
+			<small>2015年7月13日 20:54</small>
+
+
+
+<a class="btn btn-default btn-xs public_flag btn-info" data-toggle="tooltip" data-placement="top" title="タイムライン用アルバムの公開範囲は編集できません。" onclick="return false;" href="#"><i class="fa fa-globe"></i></a>
+
+		</div><!-- sub_info -->
+
+
+	</div>
+</div>
+
+
+			<div class="article">
+				<div class="subinfo">
+					<small>アルバム: <a href="http://demo.flockbird.uzuralife.com/album/3">タイムライン用アルバム</a></small>
+				</div>
+
+				<div class="comment_info">
+					<small><span class="glyphicon glyphicon-comment"></span> 0</small>
+					<small><a href="http://demo.flockbird.uzuralife.com/album/image/127?write_comment=1#comments">コメントする</a></small>
+				</div><!-- comment_info -->
+
+<small>
+<a class="js-modal link_like_count" id="link_like_count_127" data-target="#modal_like_member" data-uri="album/image/like/api/member/127.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="like_count unset_like_count" id="like_count_127" data-id="127">0</span></a></small>
+
+<small class="mr10"><a class="js-like link_like mr3" id="link_like_127" data-id="127" data-uri="album/image/like/api/update/127.json" data-count="#like_count_127" href="#">イイねする</a></small>
+
+			</div><!-- article -->
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_127">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="album/image/api/menu/127.html" data-member_id="2" data-menu="#menu_127" data-loaded="0" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_127">
+			<li><a href="http://demo.flockbird.uzuralife.com/album/image/127"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+		</div><!-- imgBox -->
+
+	</div><!-- image_item -->
+	<div class="image_item js-hide-btn" id="image_item_126" data-hidden_btn="btn_dropdown_126">
+		<div class="imgBox" id="imgBox_126" onmouseover="$('#btn_album_image_edit_126').show();" onmouseout="$('#btn_album_image_edit_126').hide();">
+			<div class="content"><a href="http://demo.flockbird.uzuralife.com/album/image/126"><img class="" src="/media/img/220x220/ai/3/74c2ce717d36f662e70ca30e43de1d6c22bbf84d.jpg" alt="74c2ce717d36f662e70ca30e43de1d6c22bbf84d" /></a></div>
+			<h5><a href="http://demo.flockbird.uzuralife.com/album/image/126">i_tabi_045.JPG</a></h5>
+
+<div class="row member_contents">
+	<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+	<div class="col-xs-11">
+		<div class="main">
+			<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+		</div>
+
+		<div class="sub_info">
+			<small>2015年7月13日 20:54</small>
+
+
+
+<a class="btn btn-default btn-xs public_flag btn-info" data-toggle="tooltip" data-placement="top" title="タイムライン用アルバムの公開範囲は編集できません。" onclick="return false;" href="#"><i class="fa fa-globe"></i></a>
+
+		</div><!-- sub_info -->
+
+
+	</div>
+</div>
+
+
+			<div class="article">
+				<div class="subinfo">
+					<small>アルバム: <a href="http://demo.flockbird.uzuralife.com/album/3">タイムライン用アルバム</a></small>
+				</div>
+
+				<div class="comment_info">
+					<small><span class="glyphicon glyphicon-comment"></span> 0</small>
+					<small><a href="http://demo.flockbird.uzuralife.com/album/image/126?write_comment=1#comments">コメントする</a></small>
+				</div><!-- comment_info -->
+
+<small>
+<a class="js-modal link_like_count" id="link_like_count_126" data-target="#modal_like_member" data-uri="album/image/like/api/member/126.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="like_count unset_like_count" id="like_count_126" data-id="126">0</span></a></small>
+
+<small class="mr10"><a class="js-like link_like mr3" id="link_like_126" data-id="126" data-uri="album/image/like/api/update/126.json" data-count="#like_count_126" href="#">イイねする</a></small>
+
+			</div><!-- article -->
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_126">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="album/image/api/menu/126.html" data-member_id="2" data-menu="#menu_126" data-loaded="0" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_126">
+			<li><a href="http://demo.flockbird.uzuralife.com/album/image/126"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+		</div><!-- imgBox -->
+
+	</div><!-- image_item -->
+	<div class="image_item js-hide-btn" id="image_item_125" data-hidden_btn="btn_dropdown_125">
+		<div class="imgBox" id="imgBox_125" onmouseover="$('#btn_album_image_edit_125').show();" onmouseout="$('#btn_album_image_edit_125').hide();">
+			<div class="content"><a href="http://demo.flockbird.uzuralife.com/album/image/125"><img class="" src="/media/img/220x220/ai/3/c40a69c0249fbee8c1850ae7e51a0cb448e5a945.jpg" alt="c40a69c0249fbee8c1850ae7e51a0cb448e5a945" /></a></div>
+			<h5><a href="http://demo.flockbird.uzuralife.com/album/image/125">i_tabi_047.JPG</a></h5>
+
+<div class="row member_contents">
+	<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+	<div class="col-xs-11">
+		<div class="main">
+			<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+		</div>
+
+		<div class="sub_info">
+			<small>2015年7月13日 20:54</small>
+
+
+
+<a class="btn btn-default btn-xs public_flag btn-info" data-toggle="tooltip" data-placement="top" title="タイムライン用アルバムの公開範囲は編集できません。" onclick="return false;" href="#"><i class="fa fa-globe"></i></a>
+
+		</div><!-- sub_info -->
+
+
+	</div>
+</div>
+
+
+			<div class="article">
+				<div class="subinfo">
+					<small>アルバム: <a href="http://demo.flockbird.uzuralife.com/album/3">タイムライン用アルバム</a></small>
+				</div>
+
+				<div class="comment_info">
+					<small><span class="glyphicon glyphicon-comment"></span> 0</small>
+					<small><a href="http://demo.flockbird.uzuralife.com/album/image/125?write_comment=1#comments">コメントする</a></small>
+				</div><!-- comment_info -->
+
+<small>
+<a class="js-modal link_like_count" id="link_like_count_125" data-target="#modal_like_member" data-uri="album/image/like/api/member/125.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="like_count unset_like_count" id="like_count_125" data-id="125">0</span></a></small>
+
+<small class="mr10"><a class="js-like link_like mr3" id="link_like_125" data-id="125" data-uri="album/image/like/api/update/125.json" data-count="#like_count_125" href="#">イイねする</a></small>
+
+			</div><!-- article -->
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_125">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="album/image/api/menu/125.html" data-member_id="2" data-menu="#menu_125" data-loaded="0" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_125">
+			<li><a href="http://demo.flockbird.uzuralife.com/album/image/125"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+		</div><!-- imgBox -->
+
+	</div><!-- image_item -->
+	<div class="image_item js-hide-btn" id="image_item_124" data-hidden_btn="btn_dropdown_124">
+		<div class="imgBox" id="imgBox_124" onmouseover="$('#btn_album_image_edit_124').show();" onmouseout="$('#btn_album_image_edit_124').hide();">
+			<div class="content"><a href="http://demo.flockbird.uzuralife.com/album/image/124"><img class="" src="/media/img/220x220/ai/3/27c123deb0e883c3ff5265c81afa829ede978c2a.jpg" alt="27c123deb0e883c3ff5265c81afa829ede978c2a" /></a></div>
+			<h5><a href="http://demo.flockbird.uzuralife.com/album/image/124">i_tabi_044.JPG</a></h5>
+
+<div class="row member_contents">
+	<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+	<div class="col-xs-11">
+		<div class="main">
+			<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+		</div>
+
+		<div class="sub_info">
+			<small>2015年7月13日 20:54</small>
+
+
+
+<a class="btn btn-default btn-xs public_flag btn-info" data-toggle="tooltip" data-placement="top" title="タイムライン用アルバムの公開範囲は編集できません。" onclick="return false;" href="#"><i class="fa fa-globe"></i></a>
+
+		</div><!-- sub_info -->
+
+
+	</div>
+</div>
+
+
+			<div class="article">
+				<div class="subinfo">
+					<small>アルバム: <a href="http://demo.flockbird.uzuralife.com/album/3">タイムライン用アルバム</a></small>
+				</div>
+
+				<div class="comment_info">
+					<small><span class="glyphicon glyphicon-comment"></span> 0</small>
+					<small><a href="http://demo.flockbird.uzuralife.com/album/image/124?write_comment=1#comments">コメントする</a></small>
+				</div><!-- comment_info -->
+
+<small>
+<a class="js-modal link_like_count" id="link_like_count_124" data-target="#modal_like_member" data-uri="album/image/like/api/member/124.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="like_count unset_like_count" id="like_count_124" data-id="124">0</span></a></small>
+
+<small class="mr10"><a class="js-like link_like mr3" id="link_like_124" data-id="124" data-uri="album/image/like/api/update/124.json" data-count="#like_count_124" href="#">イイねする</a></small>
+
+			</div><!-- article -->
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_124">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="album/image/api/menu/124.html" data-member_id="2" data-menu="#menu_124" data-loaded="0" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_124">
+			<li><a href="http://demo.flockbird.uzuralife.com/album/image/124"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+		</div><!-- imgBox -->
+
+	</div><!-- image_item -->
+	<div class="image_item js-hide-btn" id="image_item_123" data-hidden_btn="btn_dropdown_123">
+		<div class="imgBox" id="imgBox_123" onmouseover="$('#btn_album_image_edit_123').show();" onmouseout="$('#btn_album_image_edit_123').hide();">
+			<div class="content"><a href="http://demo.flockbird.uzuralife.com/album/image/123"><img class="" src="/media/img/220x220/ai/3/2afb293fc08d70fd87b0bf2097cb5685a372858b.jpg" alt="2afb293fc08d70fd87b0bf2097cb5685a372858b" /></a></div>
+			<h5><a href="http://demo.flockbird.uzuralife.com/album/image/123">i_tabi_030.JPG</a></h5>
+
+<div class="row member_contents">
+	<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+	<div class="col-xs-11">
+		<div class="main">
+			<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+		</div>
+
+		<div class="sub_info">
+			<small>2015年7月13日 20:54</small>
+
+
+
+<a class="btn btn-default btn-xs public_flag btn-info" data-toggle="tooltip" data-placement="top" title="タイムライン用アルバムの公開範囲は編集できません。" onclick="return false;" href="#"><i class="fa fa-globe"></i></a>
+
+		</div><!-- sub_info -->
+
+
+	</div>
+</div>
+
+
+			<div class="article">
+				<div class="subinfo">
+					<small>アルバム: <a href="http://demo.flockbird.uzuralife.com/album/3">タイムライン用アルバム</a></small>
+				</div>
+
+				<div class="comment_info">
+					<small><span class="glyphicon glyphicon-comment"></span> 0</small>
+					<small><a href="http://demo.flockbird.uzuralife.com/album/image/123?write_comment=1#comments">コメントする</a></small>
+				</div><!-- comment_info -->
+
+<small>
+<a class="js-modal link_like_count" id="link_like_count_123" data-target="#modal_like_member" data-uri="album/image/like/api/member/123.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="like_count unset_like_count" id="like_count_123" data-id="123">0</span></a></small>
+
+<small class="mr10"><a class="js-like link_like mr3" id="link_like_123" data-id="123" data-uri="album/image/like/api/update/123.json" data-count="#like_count_123" href="#">イイねする</a></small>
+
+			</div><!-- article -->
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_123">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="album/image/api/menu/123.html" data-member_id="2" data-menu="#menu_123" data-loaded="0" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_123">
+			<li><a href="http://demo.flockbird.uzuralife.com/album/image/123"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+		</div><!-- imgBox -->
+
+	</div><!-- image_item -->
+	<div class="image_item js-hide-btn" id="image_item_122" data-hidden_btn="btn_dropdown_122">
+		<div class="imgBox" id="imgBox_122" onmouseover="$('#btn_album_image_edit_122').show();" onmouseout="$('#btn_album_image_edit_122').hide();">
+			<div class="content"><a href="http://demo.flockbird.uzuralife.com/album/image/122"><img class="" src="/media/img/220x220/ai/3/25d677ab0f07983b041e3fb994546f4489ffcade.jpg" alt="25d677ab0f07983b041e3fb994546f4489ffcade" /></a></div>
+			<h5><a href="http://demo.flockbird.uzuralife.com/album/image/122">i_tabi_048.JPG</a></h5>
+
+<div class="row member_contents">
+	<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+	<div class="col-xs-11">
+		<div class="main">
+			<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+		</div>
+
+		<div class="sub_info">
+			<small>2015年7月13日 20:54</small>
+
+
+
+<a class="btn btn-default btn-xs public_flag btn-info" data-toggle="tooltip" data-placement="top" title="タイムライン用アルバムの公開範囲は編集できません。" onclick="return false;" href="#"><i class="fa fa-globe"></i></a>
+
+		</div><!-- sub_info -->
+
+
+	</div>
+</div>
+
+
+			<div class="article">
+				<div class="subinfo">
+					<small>アルバム: <a href="http://demo.flockbird.uzuralife.com/album/3">タイムライン用アルバム</a></small>
+				</div>
+
+				<div class="comment_info">
+					<small><span class="glyphicon glyphicon-comment"></span> 0</small>
+					<small><a href="http://demo.flockbird.uzuralife.com/album/image/122?write_comment=1#comments">コメントする</a></small>
+				</div><!-- comment_info -->
+
+<small>
+<a class="js-modal link_like_count" id="link_like_count_122" data-target="#modal_like_member" data-uri="album/image/like/api/member/122.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="like_count unset_like_count" id="like_count_122" data-id="122">0</span></a></small>
+
+<small class="mr10"><a class="js-like link_like mr3" id="link_like_122" data-id="122" data-uri="album/image/like/api/update/122.json" data-count="#like_count_122" href="#">イイねする</a></small>
+
+			</div><!-- article -->
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_122">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="album/image/api/menu/122.html" data-member_id="2" data-menu="#menu_122" data-loaded="0" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_122">
+			<li><a href="http://demo.flockbird.uzuralife.com/album/image/122"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+		</div><!-- imgBox -->
+
+	</div><!-- image_item -->
+	<div class="image_item js-hide-btn" id="image_item_121" data-hidden_btn="btn_dropdown_121">
+		<div class="imgBox" id="imgBox_121" onmouseover="$('#btn_album_image_edit_121').show();" onmouseout="$('#btn_album_image_edit_121').hide();">
+			<div class="content"><a href="http://demo.flockbird.uzuralife.com/album/image/121"><img class="" src="/media/img/220x220/ai/3/6adf6492d3d3f53e0f031ec16329a8ca55ded683.jpg" alt="6adf6492d3d3f53e0f031ec16329a8ca55ded683" /></a></div>
+			<h5><a href="http://demo.flockbird.uzuralife.com/album/image/121">o_tabi_028.JPG</a></h5>
+
+<div class="row member_contents">
+	<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+	<div class="col-xs-11">
+		<div class="main">
+			<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+		</div>
+
+		<div class="sub_info">
+			<small>2015年7月13日 20:54</small>
+
+
+
+<a class="btn btn-default btn-xs public_flag btn-info" data-toggle="tooltip" data-placement="top" title="タイムライン用アルバムの公開範囲は編集できません。" onclick="return false;" href="#"><i class="fa fa-globe"></i></a>
+
+		</div><!-- sub_info -->
+
+
+	</div>
+</div>
+
+
+			<div class="article">
+				<div class="subinfo">
+					<small>アルバム: <a href="http://demo.flockbird.uzuralife.com/album/3">タイムライン用アルバム</a></small>
+				</div>
+
+				<div class="comment_info">
+					<small><span class="glyphicon glyphicon-comment"></span> 0</small>
+					<small><a href="http://demo.flockbird.uzuralife.com/album/image/121?write_comment=1#comments">コメントする</a></small>
+				</div><!-- comment_info -->
+
+<small>
+<a class="js-modal link_like_count" id="link_like_count_121" data-target="#modal_like_member" data-uri="album/image/like/api/member/121.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="like_count unset_like_count" id="like_count_121" data-id="121">0</span></a></small>
+
+<small class="mr10"><a class="js-like link_like mr3" id="link_like_121" data-id="121" data-uri="album/image/like/api/update/121.json" data-count="#like_count_121" href="#">イイねする</a></small>
+
+			</div><!-- article -->
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_121">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="album/image/api/menu/121.html" data-member_id="2" data-menu="#menu_121" data-loaded="0" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_121">
+			<li><a href="http://demo.flockbird.uzuralife.com/album/image/121"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+		</div><!-- imgBox -->
+
+	</div><!-- image_item -->
+	<div class="image_item js-hide-btn" id="image_item_120" data-hidden_btn="btn_dropdown_120">
+		<div class="imgBox" id="imgBox_120" onmouseover="$('#btn_album_image_edit_120').show();" onmouseout="$('#btn_album_image_edit_120').hide();">
+			<div class="content"><a href="http://demo.flockbird.uzuralife.com/album/image/120"><img class="" src="/media/img/220x220/ai/3/f44b0d46b45cf16576e3ce4f9117a83503cf6a18.jpg" alt="f44b0d46b45cf16576e3ce4f9117a83503cf6a18" /></a></div>
+			<h5><a href="http://demo.flockbird.uzuralife.com/album/image/120">o_tabi_055.JPG</a></h5>
+
+<div class="row member_contents">
+	<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+	<div class="col-xs-11">
+		<div class="main">
+			<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+		</div>
+
+		<div class="sub_info">
+			<small>2015年7月13日 20:54</small>
+
+
+
+<a class="btn btn-default btn-xs public_flag btn-info" data-toggle="tooltip" data-placement="top" title="タイムライン用アルバムの公開範囲は編集できません。" onclick="return false;" href="#"><i class="fa fa-globe"></i></a>
+
+		</div><!-- sub_info -->
+
+
+	</div>
+</div>
+
+
+			<div class="article">
+				<div class="subinfo">
+					<small>アルバム: <a href="http://demo.flockbird.uzuralife.com/album/3">タイムライン用アルバム</a></small>
+				</div>
+
+				<div class="comment_info">
+					<small><span class="glyphicon glyphicon-comment"></span> 0</small>
+					<small><a href="http://demo.flockbird.uzuralife.com/album/image/120?write_comment=1#comments">コメントする</a></small>
+				</div><!-- comment_info -->
+
+<small>
+<a class="js-modal link_like_count" id="link_like_count_120" data-target="#modal_like_member" data-uri="album/image/like/api/member/120.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="like_count unset_like_count" id="like_count_120" data-id="120">0</span></a></small>
+
+<small class="mr10"><a class="js-like link_like mr3" id="link_like_120" data-id="120" data-uri="album/image/like/api/update/120.json" data-count="#like_count_120" href="#">イイねする</a></small>
+
+			</div><!-- article -->
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_120">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="album/image/api/menu/120.html" data-member_id="2" data-menu="#menu_120" data-loaded="0" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_120">
+			<li><a href="http://demo.flockbird.uzuralife.com/album/image/120"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+		</div><!-- imgBox -->
+
+	</div><!-- image_item -->
+	<div class="image_item js-hide-btn" id="image_item_119" data-hidden_btn="btn_dropdown_119">
+		<div class="imgBox" id="imgBox_119" onmouseover="$('#btn_album_image_edit_119').show();" onmouseout="$('#btn_album_image_edit_119').hide();">
+			<div class="content"><a href="http://demo.flockbird.uzuralife.com/album/image/119"><img class="" src="/media/img/220x220/ai/3/c87fa4029f631cbe966041511ad9c18101316b92.jpg" alt="c87fa4029f631cbe966041511ad9c18101316b92" /></a></div>
+			<h5><a href="http://demo.flockbird.uzuralife.com/album/image/119">o_tabi_104.JPG</a></h5>
+
+<div class="row member_contents">
+	<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+	<div class="col-xs-11">
+		<div class="main">
+			<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+		</div>
+
+		<div class="sub_info">
+			<small>2015年7月13日 20:54</small>
+
+
+
+<a class="btn btn-default btn-xs public_flag btn-info" data-toggle="tooltip" data-placement="top" title="タイムライン用アルバムの公開範囲は編集できません。" onclick="return false;" href="#"><i class="fa fa-globe"></i></a>
+
+		</div><!-- sub_info -->
+
+
+	</div>
+</div>
+
+
+			<div class="article">
+				<div class="subinfo">
+					<small>アルバム: <a href="http://demo.flockbird.uzuralife.com/album/3">タイムライン用アルバム</a></small>
+				</div>
+
+				<div class="comment_info">
+					<small><span class="glyphicon glyphicon-comment"></span> 0</small>
+					<small><a href="http://demo.flockbird.uzuralife.com/album/image/119?write_comment=1#comments">コメントする</a></small>
+				</div><!-- comment_info -->
+
+<small>
+<a class="js-modal link_like_count" id="link_like_count_119" data-target="#modal_like_member" data-uri="album/image/like/api/member/119.html" data-is_list="1" href="#"><i class="glyphicon glyphicon-thumbs-up"></i> <span class="like_count unset_like_count" id="like_count_119" data-id="119">0</span></a></small>
+
+<small class="mr10"><a class="js-like link_like mr3" id="link_like_119" data-id="119" data-uri="album/image/like/api/update/119.json" data-count="#like_count_119" href="#">イイねする</a></small>
+
+			</div><!-- article -->
+
+<div class="btn-group dropdown boxBtn" id="btn_dropdown_119">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-xs js-dropdown_content_menu" data-uri="album/image/api/menu/119.html" data-member_id="2" data-menu="#menu_119" data-loaded="0" name="button"><i class="glyphicon glyphicon-chevron-down"></i></button>	<ul class="dropdown-menu pull-right" role="menu" id="menu_119">
+			<li><a href="http://demo.flockbird.uzuralife.com/album/image/119"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+	</ul>
+</div>
+		</div><!-- imgBox -->
+
+	</div><!-- image_item -->
+</div><!-- image_list -->
+</div><!-- row -->
+
+<nav id="page-nav">
+<a href="/album/image/api/list.html?page=2"></a>
+</nav>
+
+<a class="listMoreBox" href="http://demo.flockbird.uzuralife.com/album/image"><i class="fa fa-caret-down"></i> もっとみる</a></div>
+
+
+<!-- GoogleAdsense -->
+<!-- GoogleAdsense -->
+
+		</div><!--/span-->
+
+		<div class="col-sm-3" id="sidebar" role="navigation">
+			<div class="profile_img_box well">
+	<a class="account-summary account-summary-small" data-nav="profile" href="http://demo.flockbird.uzuralife.com/member/profile">
+	<div class="content">
+	<div class="account-group js-mini-current-user" data-screen-name="デモユーザ2">
+	<img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/50x50xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" />	<div class="main"><b class="fullname">デモユーザ2</b></div>
+	<small class="metadata">プロフィールをみる</small>
+	</div>
+	</div>
+	</a>
+</div>
+			<ul class="nav nav-pills nav-stacked well">
+	<li class="nav-header disabled"><a>メンバーメニュー</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/member/"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/member/profile/"><i class="glyphicon glyphicon-user"></i> プロフィール</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/timeline/member/"> タイムライン</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/note/member/"> 日記</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/album/member/"> アルバム</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/member/setting/"><i class="glyphicon glyphicon-cog"></i> 設定</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/auth/logout/"><i class="glyphicon glyphicon-log-out"></i> ログアウト</a></li>
+</ul>
+			<ul class="nav nav-pills nav-stacked well">
+	<li class="nav-header disabled"><a>お知らせカテゴリ</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/news"> すべてみる</a></li>
+</ul>
+			<ul class="nav nav-pills nav-stacked well">
+	<li class="nav-header disabled"><a>サイトメニュー</a></li>
+	<li class="active"><a href="http://demo.flockbird.uzuralife.com/"> Top</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/timeline/"> タイムライン</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/thread/"> スレッド</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/note/"> 日記</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/album/image/"> アルバム写真</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/member/list/"> メンバー</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/news/list/"> お知らせ</a></li>
+	<li><a href="http://demo.flockbird.uzuralife.com/site/about"> About</a></li>
+</ul>
+
+
+<!-- GoogleAdsense -->
+<!-- GoogleAdsense -->
+
+		</div><!--/span-->
+	</div><!--/row-->
+
+<hr>
+<footer>
+	<ul class="list-inline">
+		<li><a href="http://demo.flockbird.uzuralife.com/news/list/">お知らせ</a></li>
+		<li><a href="http://demo.flockbird.uzuralife.com/site/about">About</a></li>
+		<li><a href="http://demo.flockbird.uzuralife.com/site/term">利用規約</a></li>
+		<li><a href="http://demo.flockbird.uzuralife.com/site/privacy_policy">プライバシーポリシー</a></li>
+	</ul>
+	<small>Copyright&copy; 2016 サンプルSNS All Rights Reserved.</small>
+</footer>
+
+</div><!--/.container-->
+
+	<script type="text/javascript" src="/assets/js/handlebars-v1.3.0.js?1431041947"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+if (typeof jQuery == 'undefined') document.write('<script src="/assets/js/jquery-2.1.3.min.js"><\/script>')
+</script>
+
+
+<script src="//demo.flockbird.uzuralife.com/assets/cache/b5e877c81dec257185d0331c1feb0cc9.js"></script>
+
+<script>var gapi;</script>
+<script src="//apis.google.com/js/platform.js" async defer>
+	{lang: "ja"}
+</script>
+
+<script>
+var GL = {};
+GL.execute_flg = false;
+function get_uid() {return 2;}
+function check_is_admin() {return false;}
+function getBasePath() {return '/';}
+function getCurrentPath() {return '';}
+function getBaseUrl() {
+	var is_current_protocol = (arguments.length > 0) ? arguments[0] : false;
+	if (is_current_protocol) return 'http://demo.flockbird.uzuralife.com/';
+	return 'http://demo.flockbird.uzuralife.com/';
+}
+function get_token_key() {return 'csrf_token';}
+function get_token() {return 'd41d8cd98f00b204e9800998ecf8427e';}
+function is_sp() {return false;}
+function is_site() {return true;}
+function get_term(key) {
+	var terms = {
+		'follow': 'フォロー',
+		'like': 'イイね',
+		'do_like': 'イイねする',
+		'undo_like': 'イイねを取り消す',
+		'watch': 'ウォッチ',
+		'do_watch': 'ウォッチする',
+		'do_unwatch': 'ウォッチを解除する',
+		'note': '日記',
+		'album': 'アルバム',
+		'album_image': 'アルバム写真',
+		'add_picture': '写真を追加',
+		'timeline': 'タイムライン',
+		'thread': 'スレッド',
+		'message': 'メッセージ',
+		'messageTypeMember': 'メッセージ',
+		'messageTypeGroup': 'グループメッセージ',
+		'messageTypeSiteInfo': 'サイトからの個別お知らせ',
+		'messageTypeSiteInfoAll': 'サイトからのお知らせ',
+		'messageTypeSystemInfo': 'システムからのお知らせ',
+		'public_flag': '公開範囲',
+		'comment': 'コメント',
+		'member': 'メンバー',
+		'member_left': '退会メンバー',
+		'left_member': '退会メンバー',
+		'show_detail': '詳細をみる',
+		'login': 'ログイン',
+		'auth': '認証',
+		'info': '情報',
+		'request': 'リクエスト',
+		'invalid': '不正な'
+	};
+	return terms[key];
+}
+function get_config(key) {
+	var config = {
+		'timeline_list_limit': 10,
+		'mapParams': {"div":"#map","lat":35.65858,"lng":139.745433,"zoom":15},
+		'isEnabledShareGoogle': 1,
+		'default_ajax_timeout': 10000,
+		'default_list_limit': 10,
+		'default_list_comment_limit_max': 8,
+		'default_detail_comment_limit_max': 8,
+		'default_form_comment_textarea_height': '33px',
+		'site_public_flag_default': 1,
+		'is_render_site_summary_at_client_side': 1,
+		mediaBaseUrl: '',
+		upload_dir_name: 'media',
+		site_description: 'サンプルSNSです',
+		upload_max_filesize: 8388608,
+		imageMaxWidth: 1800,
+		imageMaxHeight: 1800,
+		app_id_facebook: '1608627589417684'
+	};
+	return config[key];
+}
+</script>
+<script src="//demo.flockbird.uzuralife.com/assets/cache/22aeadce25d8d36354988c7d7ee3f301.js"></script>
+
+	<script type="text/javascript" src="/assets/js/site/modules/notice/common/util.js?1449010199"></script>
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="modal_notice_navbar">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">お知らせ</h4>
+			</div>
+			<div class="modal-body"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/x-handlebars-template" id="notices-template">
+{{#if list}}
+{{#each list}}
+<a href="{{getNoticeContentUrl notice.foreign_table notice.foreign_id notice.parent_table notice.parent_id}}" class="simpleList-item{{# unless is_read}} simpleList-item-warning{{/unless}}">
+	<img class="pull-left-img profile_image" alt="{{members.0.name}}" src="{{getImgUri members.0.file '50x50xc'}}">
+	<div class="clearfix">
+		<div>{{getNoticeInfo notice.foreign_table notice.type members members_count}}</div>
+		<small>
+			<span data-livestamp="{{sort_datetime}}"></span>
+			<span class="ml10">{{# if is_read}}既読{{else}}未読{{/if}}</span>
+		</small>
+	</div>
+</a>
+{{/each}}
+{{#if next_page}}
+{{#if is_detail}}
+<a href="#" data-uri="notice/api/list.json" data-get_data="{{conv2objStr 'page' next_page 'is_detail' 1}}" data-list="#article_list" data-template="#notices-template" id="listMoreBox_notice_detail" class="listMoreBox js-ajax-loadList">もっとみる</a>
+{{else}}
+<a class="listMoreBox" href="http://demo.flockbird.uzuralife.com/member/notice">もっとみる</a>{{/if}}
+{{/if}}
+{{else}}
+お知らせはありません
+{{/if}}
+</script>
+
+	<script type="text/javascript" src="/assets/js/site/modules/message/common/util.js?1450413596"></script>
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="modal_message_navbar">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">メッセージ</h4>
+			</div>
+			<div class="modal-body"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/x-handlebars-template" id="messages-template">
+{{#if list}}
+{{#each list}}
+<a href="{{site_url detail_page_uri}}" class="simpleList-item{{# unless is_read}} simpleList-item-warning{{/unless}}">
+	<img class="pull-left-img profile_image" alt="{{member_from.name}}" src="{{getImgUri member_from.file '50x50xc'}}">
+	<div class="clearfix">
+		{{{getMessageInfo member_from.name type message.subject}}}
+		<p>{{strimwidth message.body 50}}</p>
+		<small>
+			<span data-livestamp="{{last_sent_at}}"></span>
+			<span class="ml10">{{# if is_read}}既読{{else}}未読{{/if}}</span>
+		</small>
+	</div>
+</a>
+{{/each}}
+{{#if next_page}}
+{{#if is_detail}}
+<a href="#" data-uri="message/api/list.json" data-get_data="{{conv2objStr 'page' next_page 'is_detail' 1}}" data-list="#article_list" data-template="#messages-template" id="listMoreBox_message_detail" class="listMoreBox js-ajax-loadList">もっとみる</a>
+{{else}}
+<a class="listMoreBox" href="http://demo.flockbird.uzuralife.com/message">もっとみる</a>{{/if}}
+{{/if}}
+{{else}}
+メッセージはありません
+{{/if}}
+</script>
+
+<script type="text/x-handlebars-template" id="site_summary-template">
+<a href="{{url}}" target="_blank" class="simpleList-item simpleList-item-media">
+{{#if image}}
+	<img src="{{image}}" class="pull-left-img">
+{{/if}}
+	<div class="clearfix">
+{{#if title}}
+		<h5>{{title}}</h5>
+{{/if}}
+{{#if description}}
+		<div>{{description}}</div>
+{{/if}}
+	</div>
+</a>
+</script>
+
+<script type="text/x-handlebars-template" id="link_count_and_execute-template">
+<small class="mr3">
+	<i class="glyphicon glyphicon-comment"></i>
+	<span data-id="{{id}}" id="comment_count_{{id}}" class="comment_count">{{comment.count}}</span>
+</small>
+<!-- Modal -->
+<small>
+	<a href="#" data-is_list="1" data-uri="{{like.get_uri}}" data-target="#modal_like_member"
+		id="link_like_count_{{id}}" class="js-modal link_like_count">
+			<i class="glyphicon glyphicon-thumbs-up"></i>
+			<span data-id="{{id}}" id="{{#if id_prefix}}{{id_prefix}}{{/if}}like_count_{{id}}" class="like_count unset_like_count">{{like.count}}</span>
+	</a>
+</small>
+
+<!-- share button -->
+<small class="mr10">
+	<a href="#" data-count="#{{#if id_prefix}}{{id_prefix}}{{/if}}like_count_{{id}}" data-uri="{{like.post_uri}}" data-id="{{id}}" id="link_like_{{id}}"
+		class="js-like link_like mr3">{{#if like.is_executed}}イイねを取り消す{{else}}イイねする{{/if}}</a>
+</small>
+</script>
+
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="modal_album_slide">
+	<div class="modal-dialog modal-full">
+		<div class="modal-content">
+			<div class="modal-body"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="modal_like_member">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">イイねしたメンバー</h4>
+			</div>
+			<div class="modal-body"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$('#modal_like_member').on('hidden.bs.modal', function (e) {
+  $('#modal_like_member .modal-body').html('');
+})
+</script>
+
+<script type="text/x-handlebars-template" id="comment-template">
+{{#if next_id}}
+<a href="#" data-uri="{{get_uri}}" data-get_data="{{conv2objStr 'max_id' next_id 'since_id' since_id 'image_size' image_size.key}}" data-list="#comment_list_{{parent.id}}" data-template="#comment-template" id="listMoreBox_comment_{{parent.id}}" class="listMoreBox js-ajax-loadList">もっとみる</a>
+{{/if}}
+{{#each list}}
+<div data-parent_auther_id="{{../parent.member_id}}" data-auther_id="{{member.id}}" data-id="{{id}}" id="commentBox_{{id}}" class="js-hide-btn-simple commentBox commentBox_{{id}}">
+	<div class="row member_contents">
+		<div class="col-xs-1">
+{{#if member}}
+			<a href="{{member_url member.id}}"><img src="{{img_url member.file ../../image_size.value}}" alt="{{member_screen_name member.name}}" class="img-responsive profile_image"></a>
+{{else}}
+			<img src="{{img_url member.file ../../image_size.value}}" alt="{{member_screen_name member.name}}" class="img-responsive profile_image">
+{{/if}}
+		</div>
+		<div class="col-xs-11">
+			<div class="main">
+{{#if member}}
+				<b class="fullname"><a href="{{member_url member.id}}">{{member_screen_name member.name}}</a></b>
+{{else}}
+				<b class="fullname">{{member_screen_name member.name}}</b>
+{{/if}}
+				<div>{{{body}}}</div>
+			</div>
+			<div class="sub_info">
+				<small><span data-livestamp="{{created_at}}"></span></small>
+{{#if member}}
+				<small class="ml10">
+					<a href="#" data-parent_id="{{../../parent.id}}" data-input="#textarea_comment_{{../../parent.id}}" data-hide="#link_show_comment_form_{{../../parent.id}}" data-open="#commentPostBox_{{../../parent.id}}" data-text="@{{member.name}}" id="link_reply_{{id}}" class="js-insert_text"><i class="fa fa-reply"></i><span class="hidden-xs-inline"> 返信する</span></a>
+				</small>
+{{/if}}
+				<small class="ml10">
+					<a href="#" data-uri="{{get_like_members_uri}}" data-is_list="1" data-target="#modal_like_member"
+						 id="link_like_count_{{comment_table}}_{{id}}" class="js-modal">
+							<i class="glyphicon glyphicon-thumbs-up"></i>
+							<span data-id="{{id}}" id="like_count_{{comment_table}}_{{id}}" class="like_count unset_like_count">{{like_count}}</span>
+					</a>
+				</small>
+				<small class="ml3"><a href="#" data-count="#like_count_{{comment_table}}_{{id}}" data-uri="{{post_like_uri}}" data-id="{{id}}" id="link_like_{{id}}" class="js-like">{{#if is_liked}}{{getTerm 'undo_like'}}{{else}}{{getTerm 'do_like'}}{{/if}}</a></small>
+			</div><!-- sub_info -->
+		</div>
+	</div><!-- row -->
+	<a href="#" data-msg="削除します。よろしいですか？" data-counter="#comment_count_{{../parent.id}}" data-uri="{{../delete_uri}}" data-parent="#commentBox_{{id}}" data-id="{{id}}" id="btn_comment_delete_{{id}}" class="btn btn-default boxBtn btn-xs js-ajax-delete hidden_btn"><i class="glyphicon glyphicon-trash"></i></a>
+</div>
+{{/each}}
+</script>
+
+<script type="text/x-handlebars-template" id="comment_form-template">
+<div class="commentPostBox" id="commentPostBox_{{this.id}}">
+	<div class="member_contents row">
+		<div class="col-xs-1"><a href="http://demo.flockbird.uzuralife.com/member/2"><img class="img-responsive profile_image" alt="デモユーザ2" src="/media/img/30x30xc/ai/1/c8d06cbf93b677b0081c0dc515ea95cd3e91b57d.jpg" /></a></div>
+		<div class="col-xs-11">
+			<div class="main">
+				<b class="fullname"><a href="http://demo.flockbird.uzuralife.com/member/2">デモユーザ2</a></b>
+				<div class="input">
+					<textarea name="body" id="textarea_comment_{{this.id}}" class="form-control autogrow" rows="1"></textarea>
+				</div>
+				<div class="clearfix">
+					<a href="#" id="btn_comment_{{this.id}}" class="btn btn-default btn-sm pull-right js-ajax-postComment" data-template="#comment-template" data-list="{{this.listSelector}}"{{#if this.counterSelector}} data-counter="{{this.counterSelector}}"{{/if}} data-get_uri="{{this.getUri}}" data-latest="1" data-post_uri="{{this.postUri}}" data-textarea="#textarea_comment_{{this.id}}"><i class="glyphicon glyphicon-edit"></i><span class="hidden-xs-inline"> 送信</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</script>
+
+<script type="text/x-handlebars-template" id="tl_dropdown_menu-tpl">
+{{#if detail_uri}}
+<li><a href="{{detail_uri}}"><i class="fa fa-file-o"></i> 詳細をみる</a></li>
+{{else}}
+<li><span class="disabled"><i class="fa fa-file-o"></i> 詳細をみる</span></li>
+{{/if}}
+{{#if delete_uri}}<li><a href="#" class="js-ajax-delete" data-uri="{{delete_uri}}" data-parent="#{{parent_id}}"><i class="glyphicon glyphicon-trash"></i> 削除する</a></li>{{/if}}
+</script>
+	<script type="text/javascript" src="/assets/js/site/modules/timeline/common/load_timeline.js?1456355377"></script>
+
+
+	<script type="text/javascript" src="/assets/js/jquery.masonry.min.js?1431041947"></script>
+	<script type="text/javascript" src="/assets/js/jquery.infinitescroll.min.js?1431041947"></script>
+<script>
+$(function(){
+	load_masonry_item('#image_list', '.image_item', false);
+});
+</script>
+
+</body>
+</html>

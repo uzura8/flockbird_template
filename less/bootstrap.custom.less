@@ -1,0 +1,182 @@
+@import "bootstrap/bootstrap.less";
+@import "flockbird/variables.less";
+@import "env_variables.less";
+
+@icon-font-path: '@{document-root-path}assets/fonts/';
+@font-family-jp:       "Meiryo UI", Meiryo;
+@font-family-base:     @font-family-sans-serif, @font-family-jp;
+
+@navbar-margin-bottom: 0;
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+	padding-top: @navbar-height;
+	padding-bottom: @parts-padding-md;
+	min-width: @window-min-width;
+}
+.container {
+	width: 100% !important;
+}
+.hidden-xs-inline {
+  display: inline !important;
+}
+
+@media (max-width: @screen-sm-max) {
+	body {
+		padding-top: 0;
+	}
+
+	.row {
+		margin-right: @parts-margin-md * -1;
+		margin-left: @parts-margin-md * -1;
+	}
+
+	.container > .navbar-header {
+		margin-right: @parts-margin-md * -1;
+		margin-left: @parts-margin-md * -1;
+	}
+
+	.navbar-fixed-top
+	{
+		position: relative;
+		top: auto;
+	}
+
+	.input-xlarge {
+		width: 100%;
+	}
+	.input-medium {
+		width: 100%;
+	}
+	.hidden-xs-inline {
+		display: none !important;
+	}
+}
+
+
+@media (min-width: @screen-sm-min) {
+	.jGrowl.top-right {
+		right: 0;
+		top: @navbar-height !important;
+	}
+}
+
+.navbar .container {
+	position: relative;
+
+	.navbar-header .navbar-btn {
+		margin-bottom: 0 !important;
+
+		@media (max-width: @screen-sm-max) {
+			& {
+				margin-right: @parts-margin-xs;
+			}
+		}
+
+		@media (min-width: @screen-sm-min) {
+			& {
+				position: absolute;
+				top: 0;
+				right: @parts-margin-xlg;
+			}
+		}
+	}
+}
+
+.nav > li.disabled.nav-header > a {
+	cursor: default;
+	font-size: @font-size-small;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.dropdown-menu {
+	> li > span {
+		display: block;
+		padding: 3px 20px;
+		clear: both;
+		font-weight: normal;
+		line-height: @line-height-base;
+		color: @dropdown-link-color;
+		white-space: nowrap; // prevent links from randomly breaking onto new lines
+
+		&.disabled {
+			color: @dropdown-link-disabled-color;
+		}
+	}
+}
+
+.page-header {
+	margin-top: (@line-height-computed / 2) !important;
+}
+.page-header h1,
+.header h4
+{
+	margin-top: 0 !important;
+	.wrap
+}
+
+.form-horizontal .form-text {
+	padding-top: 7px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.form-group {
+	.text-block {
+		top: 8px;
+		text-align: center;
+	}
+
+	.radio label {
+		.wrap
+	}
+}
+
+.form-horizontal .form-group .modal-content .form-group {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.controls input[type="radio"],
+.controls input[type="checkbox"]
+{
+	position: relative;
+	top: -0.2em;
+}
+
+.input-medium {
+  width: 150px;
+}
+.input-xlarge {
+  width: 270px;
+}
+
+.carousel-flex .item {
+	text-align : center;
+
+	img {
+		display: inline !important;
+	}
+}
+
+.modal {
+	-webkit-overflow-scrolling: none;
+}
+
+.modal-full {
+	width: 96%;
+
+	.modal-content {
+		height: 100%;
+		padding: 5px 10px;
+	}
+}
+
+.btn_modal_close_top {
+	color: @btn-default-color;
+	position: fixed;
+	top: 5px;
+	right: 5px;
+}
+
